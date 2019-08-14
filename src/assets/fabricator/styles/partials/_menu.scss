@@ -1,0 +1,123 @@
+// menu
+.f-menu {
+	@include border-box;
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translate(-$menu-width, 0);
+	width: $menu-width;
+	height: 100%;
+	border-right:1px solid #e0e6ed;
+	z-index: 1;
+	background-color: map-get($colors, menu-background);
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	font-family: "Fakt Soft Pro Nor", serif;
+	color: #3c4858;
+	user-select:none;
+
+	> a{
+		padding: 20px 50px !important;
+		background: #4d4d4d;
+		svg{
+			width: 100%
+		}
+	}
+
+	.f-menu-active & {
+		transform: translate(0, 0);
+	}
+
+	ul {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-left: 0;
+		padding: 0;
+
+	}
+
+	> ul {
+		margin-top: 0;
+		margin-bottom: 1rem;
+		border-bottom: 1px solid #e0e6ed;
+
+		> li {
+
+		}
+	}
+
+	.arrow-active{
+		svg{
+			transform: rotate(180deg);
+		}
+	}
+	li {
+		list-style-type: none;
+		margin-top: 0;
+		margin-bottom: 0;
+		position: relative;
+		.arrow{
+			position: absolute;
+			right: 0;
+			top: 5px;
+			height: 60px;
+			width: 60px;
+			cursor: pointer;
+			text-align: center;
+			fill:#d3dce6;
+			svg{
+				margin-top: 28px
+			}
+
+		}
+
+		a{
+			line-height: 30px;
+		}
+
+		ul{
+			background-color: #f9fafc;
+			border-right: 0;
+			display: none;
+			border-top: 1px solid #e0e6ed;
+			padding: 20px 0;
+			&.show{
+				display: block;
+			}
+		}
+	}
+
+	a {
+		display: block;
+		padding: 0.5rem 2rem;
+		color: #8492a6 !important;
+		text-decoration: none;
+		font-size: 16px;
+		line-height: 1;
+		transition: all .2s;
+
+		&:hover {
+			color: #1f2d3d !important;
+			text-decoration: none;
+		}
+
+		&.f-active {
+			color: #000 !important;
+		}
+	}
+
+	.f-menu__heading {
+		padding-left: 1.5rem;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 50px;
+		color: #3c4858 !important;
+		border-top: 1px solid #e0e6ed;
+
+		&:hover {
+			color:#333 !important;
+			background-color: #fff;
+		}
+	}
+}

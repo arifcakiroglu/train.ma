@@ -1,0 +1,12 @@
+---
+notes: |
+  Links
+---
+<a href="{{ link }}" class="link {{ class }} {{#if icon}}uiIcon{{/if}}">
+	{{ body }}
+	{{#if icon}}
+	<svg class="icons-{{icon}}">
+		<use xlink:href="#{{icon}}"  />
+	</svg>
+	{{/if}}
+</a>

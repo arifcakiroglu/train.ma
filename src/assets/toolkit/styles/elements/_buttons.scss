@@ -1,0 +1,87 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: $gray-700;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: #eee;
+  border: 0;
+  border-radius: 8px;
+  appearance: none;
+  line-height: 16px;
+  letter-spacing: 1px;
+
+  &:focus {
+    text-decoration: none;
+    outline: 0;
+    transition: background .2s linear, border .2s linear, box-shadow .2s linear;
+  }
+
+  &:hover,
+  &:active{
+    text-decoration: none;
+    background-color: #ddd;
+    outline: 0;
+    transition: background .2s linear, border .2s linear, box-shadow .2s linear;
+  }
+
+  &:active,
+  &.selected{
+    background-image: none;
+    border-color: #b5b5b5;
+    box-shadow: none;
+  }
+
+  &.selected:hover {
+    background-color: darken(#dcdcdc, 5%);
+  }
+
+  &:disabled,
+  &.disabled {
+    color: rgba(102, 102, 102, 0.3);
+    cursor: default;
+    background-color: lighten(#eee, 2%);
+    &:hover{
+      box-shadow: none;
+      outline: 0
+    }
+  }
+
+  &.btn-block{
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  &.btn-large{
+    padding: 22px 30px;
+  }
+
+  &.btn-small{
+    padding: 5px 10px;
+  }
+}
+
+.btn {
+  background: $primary;
+  color: #fff;
+
+  &:focus {
+    text-decoration: none;
+    outline: 0;
+    transition: background .2s linear, border .2s linear, box-shadow .2s linear;
+  }
+
+  &:hover,
+  &:active{
+    text-decoration: none;
+    background-color: darken($primary,5%);
+    outline: 0;
+    transition: background .2s linear, border .2s linear, box-shadow .2s linear;
+  }
+}

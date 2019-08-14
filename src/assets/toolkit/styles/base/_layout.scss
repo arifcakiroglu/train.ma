@@ -1,0 +1,36 @@
+/*!
+ * Train - v1.0
+ * Copyright 2018 train.ma | @Train
+ */
+
+[grid] {
+ margin-right: -15px;
+ margin-left: -15px;
+ @include clearfix;
+}
+
+[grid] > * {
+ float: left;
+ padding-right: 15px;
+ padding-left: 15px;
+}
+
+.container {
+ margin-right: auto;
+ margin-left: auto;
+ width: 100%;
+ @include clearfix;
+}
+
+[one] 		{ width: (1 / 12 * 100%); }
+[two]		  { width: (2 / 12 * 100%); }
+[three] 	{ width: (3 / 12 * 100%); }
+[four] 	  { width: (4 / 12 * 100%); }
+[five] 	  { width: (5 / 12 * 100%); }
+[six] 		{ width: (6 / 12 * 100%); }
+[seven] 	{ width: (7 / 12 * 100%); }
+[eight] 	{ width: (8 / 12 * 100%); }
+[nine] 	  { width: (9 / 12 * 100%); }
+[ten] 		{ width: (10 / 12 * 100%); }
+[eleven]  { width: (11 / 12 * 100%); }
+[twelve]  { width: 100%; }

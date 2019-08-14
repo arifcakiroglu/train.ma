@@ -1,0 +1,20 @@
+---
+notes: |
+  Buttons base
+---
+
+<{{#if link}}a href="#" {{else}}button {{#if type}} type="{{type}}" {{/if}} {{/if}} {{#if id }} id="{{id}}" {{/if}} class="btn {{#if class}} {{ class }} {{else}} btn-light {{/if}} {{#if icon}}btn-icon{{/if}}" >
+{{#if body}}
+	{{ body }}
+{{else}}
+  Button
+	{{#if icon}}
+		<i class="icon {{#if size}}{{size}}{{/if}}">
+			<svg class="icons-{{#if icon }}{{icon}} {{ else }}tag {{/if}} {{#if color}}{{color}}{{/if}}">
+				<use xlink:href="#{{#if icon }}{{icon}}{{ else }}tag{{/if}}"/>
+			</svg>
+		</i>
+	{{/if}}
+{{/if}}
+
+</{{#if link}}a>{{else}}button>{{/if}}

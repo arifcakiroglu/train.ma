@@ -1,0 +1,11 @@
+{{#if icon}}
+	<div class="form-control-icon">
+		{{> inputs.input placeholder=placeholder }}
+		{{> icons.icon icon=icon}}
+	</div>
+{{else}}
+		<div class="form-control-icon form-control-icon-example">
+			{{> inputs.input placeholder="Tarih seçiniz"}}
+			{{> icons.icon icon="calendar"}}
+		</div>
+{{/if}}

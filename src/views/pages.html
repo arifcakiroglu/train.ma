@@ -1,0 +1,13 @@
+---
+fabricator: true
+---
+
+<h1 data-f-toggle="labels" class="uikit-font">Pages</h1>
+
+<ul>
+{{#each views.pages.items}}
+	<li>
+		<a href="pages/{{@key}}.html" class="f-item-heading">{{name}}</a>
+	</li>
+{{/each}}
+</ul>

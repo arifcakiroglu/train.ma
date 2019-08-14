@@ -1,0 +1,5 @@
+type:
+  default:
+    primary: "primary"
+    secondary: "secondary"
+    outline: "outline"

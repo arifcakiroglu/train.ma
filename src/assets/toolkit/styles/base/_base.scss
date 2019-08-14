@@ -1,0 +1,86 @@
+// Utilities
+@import "../utilities/index";
+
+html{
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.fullscreen{
+    .view{
+      background: #F4F4F4;
+      padding-top: 700px;
+      &:before,
+      &:after{
+        content: '';
+        background: #f3f6f9;
+        left: -100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: -1;
+        display: block;
+      }
+
+      &:after{
+        left: auto;
+        right: -100%;
+      }
+    }
+  }
+}
+
+body{
+  min-height: 100%;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f3f6f9;
+  overflow-x: hidden;
+  letter-spacing: .004em;
+  font-family: $font-family-base;
+
+  &.left-panel-active{
+    background-color: $primary
+  }
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  text-decoration: none
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  margin: 0;
+  padding: 0
+}
+
+pre{
+  margin: 0;
+  padding: 0
+}
+
+hr{
+  background: transparent;
+  border:none;
+  border-top: 1px solid #EAEAEA;
+  margin: 50px 0
+}
+
+*{
+  font-family: $font-family-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+}

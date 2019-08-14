@@ -1,0 +1,27 @@
+
+.view{
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.page{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: none;
+  z-index: 1;
+  background-color: #EEF2F8;
+}
+
+.page-content{
+  will-change: scroll-position;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  padding-top: 60px;
+}

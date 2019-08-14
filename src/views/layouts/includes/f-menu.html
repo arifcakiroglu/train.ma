@@ -1,0 +1,62 @@
+<!-- fabricator menu -->
+<div class="f-menu">
+
+	{{> f-controls}}
+
+	<ul>
+
+		<li>
+			<a href="index.html" class="f-menu__heading">Overview</a>
+		</li>
+
+		{{#each materials}}
+		<li class="{{@key}}">
+			<a href="{{@key}}.html" class="f-menu__heading ">{{name}}</a>
+			<span class="arrow">
+				<svg width="8" height="4" viewBox="0 0 8 4" ><path d="M7.76,1L4.46,3.84a0.73,0.73,0,0,1-.92,0L0.24,1A0.56,0.56,0,0,1,.1.24,0.55,0.55,0,0,1,.7,0H7.3A0.55,0.55,0,0,1,8,.41,0.56,0.56,0,0,1,7.76,1Z"></path></svg>
+			</span>
+			<ul>
+				{{#each items}}
+				<li>
+					<a href="{{@../key}}.html#{{@key}}">{{name}}</a>
+				</li>
+				{{/each}}
+			</ul>
+		</li>
+		{{/each}}
+
+		{{#each views}}
+		<li class="{{@key}}">
+			<a href="{{@key}}.html" class="f-menu__heading ">{{name}}</a>
+			<span class="arrow">
+				<svg width="8" height="4" viewBox="0 0 8 4" ><path d="M7.76,1L4.46,3.84a0.73,0.73,0,0,1-.92,0L0.24,1A0.56,0.56,0,0,1,.1.24,0.55,0.55,0,0,1,.7,0H7.3A0.55,0.55,0,0,1,8,.41,0.56,0.56,0,0,1,7.76,1Z"></path></svg>
+			</span>
+			<ul>
+				{{#each items}}
+				<li>
+					<a target="_blank" href="{{@../key}}/{{@key}}.html">{{name}}</a>
+				</li>
+				{{/each}}
+			</ul>
+		</li>
+		{{/each}}
+
+		<li class="docs">
+			<a href="docs.html" class="f-menu__heading">Docs</a>
+			<span class="arrow">
+				<svg width="8" height="4" viewBox="0 0 8 4" ><path d="M7.76,1L4.46,3.84a0.73,0.73,0,0,1-.92,0L0.24,1A0.56,0.56,0,0,1,.1.24,0.55,0.55,0,0,1,.7,0H7.3A0.55,0.55,0,0,1,8,.41,0.56,0.56,0,0,1,7.76,1Z"></path></svg>
+			</span>
+			<ul>
+				{{#each docs}}
+				<li>
+					<a href="docs.html#{{@key}}">{{name}}</a>
+				</li>
+				{{/each}}
+			</ul>
+		</li>
+
+	</ul>
+
+
+</div>
+<!-- /fabricator menu -->

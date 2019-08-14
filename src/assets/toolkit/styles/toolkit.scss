@@ -1,0 +1,23 @@
+/*!
+ * Train
+ * http://train.ma
+ */
+
+// Global requirements
+@import "utilities/index";
+@import "base/reset";
+@import "base/typography";
+@import "base/base";
+@import "base/layout";
+
+// Elements
+@import "elements/index";
+
+// Components
+@import "components/index";
+
+// Pages
+@import "pages/index";
+
+//Helpers
+@import "utilities/helpers";

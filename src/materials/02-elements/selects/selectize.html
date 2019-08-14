@@ -1,0 +1,25 @@
+{{#if mapList}}{{mapList}}{{/if}}
+<select
+    id="{{#if id}}{{id}}{{ else }}Selectize{{/if}}"
+		style="width:{{#if width}} {{width}}{{ else }} 400px {{/if}}"
+		class="demo-default"
+		data-placeholder="Select a person...">
+
+	{{#if cities}}
+		{{#each select}}
+				{{#each this}}
+				<option >{{this}}</option>
+				{{/each}}
+		{{/each}}
+	{{/if}}
+
+	{{#if map}}
+		{{#each maplist}}
+				{{#each this}}
+				<option >{{this}}</option>
+				{{/each}}
+		{{/each}}
+	{{ else }}
+	<option>list item 1</option>
+	{{/if}}
+</select>

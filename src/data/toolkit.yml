@@ -1,0 +1,9 @@
+colors:
+  Global:
+    Primary: "#F69C00"
+    Secondary: "#4D4D4D"
+  Message:
+    Blue: "#1FB6FF"
+    Positive: "#13CE66"
+    Red: "#FF4949"
+    Warning: "#FFC82C"

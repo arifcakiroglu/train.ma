@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>{{title}}</title>
+	<meta name="description" content="{{description}}" />
+
+	{{#if fabricator}}<link rel="stylesheet" href="/assets/fabricator/styles/f.css{{{data.version}}}">{{/if}}
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/toolkit/images/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/toolkit/images/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/toolkit/images/favicons/favicon-16x16.png">
+	<!-- <link rel="manifest" href="/assets/toolkit/images/favicons/site.webmanifest"> -->
+	<link rel="mask-icon" href="/assets/toolkit/images/favicons/safari-pinned-tab.svg" color="#f69c00">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- toolkit styles -->
+	<link rel="stylesheet" href="/assets/toolkit/styles/toolkit.css{{{data.version}}}">
+	<!-- /toolkit styles -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+</head>
+<body>
+
+	{{#if fabricator}}
+		{{> f-icons}}
+		{{> f-menu}}
+		<div class="f-container {{#if fluid }}container-fluid{{/if}}">
+			<div class="{{#if fluid }}inner-container-fluid{{ else }}inner-container{{/if}}">
+
+			{{> f-control-bar}}
+	{{/if}}
+	
+	{% body %}
+
+	{{#if fabricator}}
+			</div>
+
+
+		</div>
+	<script src="/assets/fabricator/scripts/f.js{{{data.version}}}"></script>
+	{{/if}}
+
+	<!-- toolkit scripts -->
+	<script defer src="/assets/toolkit/scripts/toolkit.js{{{data.version}}}"></script>
+	<!-- /toolkit scripts -->
+</body>
+</html>

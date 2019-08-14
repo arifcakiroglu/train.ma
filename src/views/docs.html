@@ -1,0 +1,17 @@
+---
+fabricator: true
+---
+
+<div class="docs">
+	<h1 data-f-toggle="labels" class="uikit-font">Docs</h1>
+
+	{{#each docs}}
+
+		<div class="f-item-group uikit-font">
+			<h2 id="{{@key}}"><a href="#{{@key}}">{{name}}</a></h2>
+			{{{content}}}
+		</div>
+
+	{{/each}}
+</div>
+

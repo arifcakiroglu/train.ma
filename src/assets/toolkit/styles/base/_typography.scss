@@ -1,0 +1,32 @@
+/*!
+ * Typography
+ */
+
+
+@font-face {
+	font-family: 'Fakt Soft Pro Bnd';
+	src: url('../fonts/FaktSoftPro-Blond.eot');
+	src: url('../fonts/FaktSoftPro-Blond.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/FaktSoftPro-Blond.woff') format('woff'),
+		url('../fonts/FaktSoftPro-Blond.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Fakt Soft Pro Nor';
+	src: url('../fonts/FaktSoftPro-Normal.eot');
+	src: url('../fonts/FaktSoftPro-Normal.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/FaktSoftPro-Normal.woff') format('woff'),
+		url('../fonts/FaktSoftPro-Normal.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+h1{ font-size: $h1-font-size }
+h2{ font-size: $h2-font-size }
+h3{ font-size: $h3-font-size }
+h4{ font-size: $h4-font-size }
+h5{ font-size: $h5-font-size }
+h6{ font-size: $h6-font-size }
