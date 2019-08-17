@@ -1,0 +1,19 @@
+.search-header{
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .passenger{
+    color: #A1A9C3;
+    i{
+      width: 44px;
+      height: 44px;
+      svg{
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -37,9 +37,14 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f3f6f9;
-  overflow-x: hidden;
+  overflow: hidden;
   letter-spacing: .004em;
   font-family: $font-family-base;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -webkit-user-select: none;
+  -webkit-highlight: none; 
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 
   &.left-panel-active{
     background-color: $primary

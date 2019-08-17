@@ -1,0 +1,85 @@
+.passenger{
+  .item{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    color: $secondary;
+    padding: 20px 0;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  .youth{
+    .item{
+      border: none
+    }
+    .select-wrap{
+      background-color: rgba(255,255,255, .5);
+      margin-bottom: 0
+    }
+  }
+
+  .count{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span{
+      min-width: 30px;
+      text-align: center;
+    }
+    div{
+      width: 44px;
+      height: 44px;
+      border: 1px solid $secondary;
+      color: $secondary;
+      border-radius: 40px;
+      position: relative;
+
+      &.disabled{
+        opacity: .6
+      }
+
+      &:focus,
+      &:active{
+        &:not(.disabled){
+          background-color: $secondary;
+          &:before,
+          &:after{
+            background-color: #fff
+          }
+        }
+      }
+
+      &:before,
+      &:after{
+        content: " ";
+        position: absolute;
+        display: block;
+        left: 50%;
+        top: 50%;
+        transform: translate3d(-50%,-50%,0);
+      }
+
+      &:before{
+        width: 10px;
+        height: 2px;
+        border-radius: 2px;
+        background: $secondary
+      }
+
+      &:after{
+        width: 2px;
+        height: 10px;
+        border-radius: 2px;
+        background: $secondary
+      }
+
+      &.decrement{
+        &:after{
+          display: none
+        }
+      }
+    }
+  }
+
+}

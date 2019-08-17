@@ -1,0 +1,39 @@
+.autocomplete-suggestions {
+  color: $secondary;
+  font-size: 18px
+}
+.autocomplete-suggestion{
+  padding: 10px 10px 10px 58px;
+  border-radius: 10px;
+  position: relative;
+  margin: 4px 0;
+
+  &:after{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background-color: #dde5ef;
+    display: block;
+    left: 0
+  }
+  &.selected {
+    background: #fff;
+
+    &:before{
+      content: "";
+      position: absolute;
+      top: -4px;
+      width: 100%;
+      height: 1px;
+      background-color: #eef2f8;
+      display: block;
+      left: 0
+    }
+    &:after{
+      display: none
+    }
+  }
+  b { font-weight: normal; color: $primary; }
+}

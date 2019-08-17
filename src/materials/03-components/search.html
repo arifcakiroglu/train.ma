@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card margin-top">
   <form action="">
 
     <div class="search-header">
@@ -6,28 +6,38 @@
         <div class="main">
           <span>One-way</span>
           <i class="icon">
-            <svg><use xlink:href="#marker"></use></svg>
+            <svg><use xlink:href="#arrow"></use></svg>
           </i>
         </div>
         <div class="list">
-          <div data-value="1" class="slected">One-way</div>
-          <div data-value="2">Round-trip</div>
+          <div>
+            <div data-value="1" class="item selected">One-way</div>
+            <div data-value="2" class="item">Round-trip</div>
+          </div>
         </div>
       </div>
+      <div class="passenger open-popup" data-popup="passenger">
+        <i class="icon">
+          <svg><use xlink:href="#user"></use></svg>
+        </i>
+        <span>1</span>
+      </div>
     </div>
+
+
 
     <div class="input-wrap">
       <i class="icon">
         <svg><use xlink:href="#target"></use></svg>
       </i>
-      <input type="text" placeholder="from: City, Station or Airport" class="open-popup" data-popup="from">
+      <input type="text" placeholder="from: City, Station or Airport" class="open-popup" data-popup="from" id="fromField">
     </div>
 
     <div class="input-wrap">
       <i class="icon">
         <svg><use xlink:href="#marker"></use></svg>
       </i>
-      <input type="text" placeholder="to: City, Station or Airport" class="open-popup" data-popup="to">
+      <input type="text" placeholder="to: City, Station or Airport" class="open-popup" data-popup="to" id="toField">
     </div>
 
     <div class="input-wrap">

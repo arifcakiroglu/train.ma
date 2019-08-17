@@ -11,6 +11,10 @@ jQuery.fn.exists = function(){ return this.length > 0; }
 
 let train = window.train  = require("./train");
 const pickadate = require("pickadate/lib/picker.date");
+const autoComplete = require('./components/autocomplete');
+
+
+
 $.extend($.fn.pickadate.defaults, {
   monthsFull: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
   weekdaysShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
@@ -21,6 +25,7 @@ $.extend($.fn.pickadate.defaults, {
 
 
 $(function(){
+
 
   // Get icons
   $.get("/assets/toolkit/images/icons/sprite.svg?v=1", function(data) {
@@ -61,4 +66,90 @@ $(function(){
 
   // dropdown
   train.dropdown.init();
+
+
+  //Passengers
+  train.passenger.init();
+
+
+  //autocomplete
+
+  new autoComplete({
+    selector: 'input[name="from"]',
+    minChars: 1,
+    menuClass: 'from-autocomplete',
+    source: function(term, suggest){
+        // docs: https://goodies.pixabay.com/javascript/auto-complete/demo.html
+        // Todo: make it dynamic
+        // try { xhr.abort(); } catch(e){}
+        // xhr = $.getJSON('/some/ajax/url/', { q: term }, function(data){ response(data); });
+
+
+        term = term.toLowerCase();
+        var choices = [
+          'Paris, France',
+          'Paris Charles de Gaulle Airport (CDG)',
+          'Paris Gare de Lyon',
+          'Par (PAR)',
+          'Par, United Kingdom',
+          'Paris Gare du Nord',
+          'Paris Gare Montparnasse',
+          'Paris Orly Airport (ORY)',
+          'Paris Gare de l\'Est',
+          'Pare, Italy',
+          'Pare, Indenosia'
+        ];
+        var matches = [], i;
+        for (i=0; i<choices.length; i++)
+            if (~choices[i].toLowerCase().indexOf(term)) matches.push(choices[i]);
+        suggest(matches);
+    },
+    onSelect: function(e, term, item){
+      train.popup.hide($('#from'));
+      $('#fromField').val(term)
+    }
+  });
+
+
+  new autoComplete({
+    selector: 'input[name="to"]',
+    minChars: 1,
+    menuClass: 'to-autocomplete',
+    source: function(term, suggest){
+        term = term.toLowerCase();
+        var choices = [
+          'Paris, France',
+          'Paris Charles de Gaulle Airport (CDG)',
+          'Paris Gare de Lyon',
+          'Par (PAR)',
+          'Par, United Kingdom',
+          'Paris Gare du Nord',
+          'Paris Gare Montparnasse',
+          'Paris Orly Airport (ORY)',
+          'Paris Gare de l\'Est',
+          'Pare, Italy',
+          'Pare, Indenosia'
+        ];
+        var matches = [], i;
+        for (i=0; i<choices.length; i++)
+            if (~choices[i].toLowerCase().indexOf(term)) matches.push(choices[i]);
+        suggest(matches);
+    },
+    onSelect: function(e, term, item){
+      train.popup.hide($('#to'));
+      $('#toField').val(term)
+    }
+  });
+
+  $('.results .more-info').on('click', function(){
+    $(this).parents('.item').toggleClass('journey-view')
+  });
+
+
+  if($('.results').exists()){
+    $('.page-content').one('scroll', function(e){
+      $('.filter-bar').addClass('active');
+    })
+  }
+
 });

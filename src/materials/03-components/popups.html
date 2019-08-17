@@ -4,13 +4,13 @@
   <div class="popup-header">
     <i class="close-popup" data-popup="from"><svg><use xlink:href="#arrow"></use></svg></i>
     <div class="input-wrap">
-      <input type="text" placeholder="from: City, Station or Airport">
+      <input type="text" placeholder="from: City, Station or Airport" name="from" id="popupFromField">
     </div>
 
   </div>
   <div class="popup-page">
     <div class="popup-page-content">
-      from
+      <div class="from-autocomplete"></div>
     </div>
   </div>
 </div>
@@ -19,13 +19,68 @@
   <div class="popup-header">
     <i class="close-popup" data-popup="to"><svg><use xlink:href="#arrow"></use></svg></i>
     <div class="input-wrap">
-      <input type="text" placeholder="to: City, Station or Airport">
+      <input type="text" placeholder="to: City, Station or Airport" name="to">
     </div>
 
   </div>
   <div class="popup-page">
     <div class="popup-page-content">
-      to
+      <div class="to-autocomplete"></div>
+    </div>
+  </div>
+</div>
+
+<div class="popup gray" id="passenger">
+
+  <div class="popup-header close-popup" data-popup="passenger">
+    <i><svg><use xlink:href="#arrow"></use></svg></i>
+    <div class="title">Passengers</div>
+  </div>
+
+  <div class="popup-page">
+    <div class="popup-page-content">
+      <div class="passenger">
+        <div class="item">
+          <div class="title">
+            Adult (26+)
+          </div>
+          <div class="count">
+            <div class="decrement disabled"></div>
+            <span data-min="1" data-max="8" class="passenger-count">1</span>
+            <div class="increment"></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="title">
+            Youth (0-25)
+          </div>
+          <div class="count">
+            <div class="decrement disabled" data-youth="on"></div>
+            <span data-min="0" data-max="8" class="passenger-count">0</span>
+            <div class="increment" data-youth="on"></div>
+          </div>
+        </div>
+
+        <div class="youth">
+
+        </div>
+
+      </div>
+    </div>
+    <footer>
+      <button class="btn btn-primary btn-block" type="button" id="confirmPassenger">Confirm</button>
+    </footer>
+  </div>
+</div>
+
+
+<div class="popup half" id="class">
+  <div class="popup-header">
+
+  </div>
+  <div class="popup-page">
+    <div class="popup-page-content">
+      asdas
     </div>
   </div>
 </div>
