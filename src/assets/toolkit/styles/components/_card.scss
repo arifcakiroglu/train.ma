@@ -5,3 +5,37 @@
   background: #FFFFFF;
   border-radius: $border-radius;
 }
+
+.well{
+  box-shadow: 0 2px 4px 0 rgba(54,80,111,0.15);
+  border-radius: 5px;
+  p{
+    color: #7D8EA8;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+  }
+
+  h3{
+    color: $secondary;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 20px;
+
+    &.border-bottom{
+      border-bottom: 1px solid #EEF2F8;
+      padding-bottom: 10px;
+    }
+  }
+  h4{
+    color: $secondary;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 20px;
+    font-weight: 400;
+
+    small{
+      color: #8C99A8;
+    }
+  }
+}

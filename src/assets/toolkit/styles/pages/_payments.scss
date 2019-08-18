@@ -1,0 +1,106 @@
+.payment-methods{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+
+  .icon{
+    width: 50px;
+    min-width: 50px;
+    height: 20px;
+
+    &:last-child{
+      width: 40px;
+      min-width: 40px
+    }
+    svg{
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}
+
+
+.email-info{
+  text-align: center;
+  background-color: #ECF0F3;
+  border-radius: $border-radius;
+  padding: 10px;
+  color: #7D8EA8;
+  line-height: 18px;
+  span{
+    display: block;
+  }
+}
+
+.payment-result{
+
+}
+
+.payment-success{
+  .title{
+    color: $success;
+    text-align: center;
+    font-size: 18px;
+    .icon{
+      width: 44px;
+      height: 26px;
+      display: inline-block;
+      margin: 20px 0;
+
+      svg{
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+  }
+
+  .content{
+    font-size: 18px;
+    color: $secondary;
+    text-align: center;
+    margin: 20px 0 10px;
+    div{
+      color: $primary;
+    }
+  }
+
+  .title2{
+    display: block;
+    color: $secondary;
+    font-size: 16px;
+    text-align: center;
+    margin: 20px auto;
+    font-weight: 600
+  }
+
+  .info{
+    background-color: #ECF0F3;
+    border-radius: $border-radius;
+    padding: 20px;
+    margin-top: 20px;
+
+    >div{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 18px;
+      color: $secondary;
+      margin-bottom: 10px;
+
+      &:last-child{
+        margin:0
+      }
+
+      .price{
+        color: $primary;
+      }
+
+      >div{
+        width: 100%;
+      }
+    }
+  }
+}

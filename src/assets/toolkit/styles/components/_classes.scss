@@ -1,0 +1,102 @@
+
+
+.class-container{
+  color: $secondary;
+  padding-top: 35px;
+  .item{
+    border-bottom: 1px solid #E7ECF3;
+    padding: 20px;
+    position: relative;
+
+    &:active,
+    &.active,
+    &:focus,
+    &:hover{
+      background-color: #ECF0F3;
+    }
+
+    &:last-child{
+      border: none;
+    }
+  }
+  .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  strong{
+    display: block;
+    font-weight: 16px;
+    line-height: 16px;
+    color: $secondary;
+  }
+  span{
+    color: #7A91AC;
+    font-size: 14px;
+  }
+
+  i{
+    font-style: normal;
+    color: $secondary;
+    font-size: 16px;
+  }
+
+  .price{
+    color: $primary;
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  p{
+    color: #7A91AC;
+    font-size: 14px;
+    margin: 10px 0 0;
+    max-width: calc(100% - 20px);
+  }
+
+  .icon{
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    color: #91A4BA;
+    transform: translateY(-50%) rotate(-180deg);
+    svg{
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}
+
+
+.class-info{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: $secondary;
+  margin-bottom: 20px;
+  > div{
+    &:first-child{
+      margin-right: 5px;
+    }
+  }
+  strong{
+    font-size: 21px;
+    font-weight: 400
+  }
+
+  small{
+    display: block;
+    font-size: 10px;
+    line-height: 10px
+  }
+  span{
+    font-size: 12px;
+    opacity: .7;
+    line-height: 12px;
+    display: block;
+  }
+}

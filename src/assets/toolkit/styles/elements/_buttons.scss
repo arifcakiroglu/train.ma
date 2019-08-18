@@ -64,10 +64,26 @@
 
   &.btn-small{
     padding: 5px 10px;
+    font-size: 16px;
+  }
+
+  &.btn-icon{
+    position: relative;
+    .icon{
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-180deg);
+      svg{
+        width: 14px;
+        height: 14px;
+        display: block;
+      }
+    }
   }
 }
 
-.btn {
+.btn-primary {
   background: $primary;
   color: #fff;
 
@@ -84,4 +100,105 @@
     outline: 0;
     transition: background .2s linear, border .2s linear, box-shadow .2s linear;
   }
+
+  border-radius: 50px;
+  text-align: center;
+  font-size: 18px
+}
+
+.btn-subtle {
+  background: #EEF2F8;
+  color: #7D8EA8;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400 !important;
+  letter-spacing: normal;
+
+  &:focus {
+    text-decoration: none;
+    outline: 0;
+    transition: background .2s linear, border .2s linear, box-shadow .2s linear;
+  }
+
+  &:hover,
+  &:active{
+    text-decoration: none;
+    background-color: darken($primary,5%);
+    outline: 0;
+    transition: background .2s linear, border .2s linear, box-shadow .2s linear;
+  }
+}
+
+
+.btn-subtle-success {
+  background: #D4F0E7;
+  color: #42B18E;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400 !important;
+  letter-spacing: normal;
+
+  &:focus {
+    text-decoration: none;
+    outline: 0;
+    transition: background .2s linear, border .2s linear, box-shadow .2s linear;
+  }
+
+  &:hover,
+  &:active{
+    text-decoration: none;
+    background-color: darken($success,5%);
+    color: #fff;
+    outline: 0;
+    transition: background .2s linear, border .2s linear, box-shadow .2s linear;
+  }
+
+  .icon{
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%) rotate(0) !important;
+    svg{
+      width: 100% !important;
+      height: 100% !important;
+      display: block !important;
+
+    }
+  }
+}
+
+
+.btn-subtle-text{
+  background: transparent;
+  color: #97A7BA;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400 !important;
+  letter-spacing: normal;
+
+  &:focus {
+    text-decoration: none;
+    outline: 0;
+    transition: background .2s linear, border .2s linear, box-shadow .2s linear;
+  }
+
+  &:hover,
+  &:active{
+    text-decoration: none;
+    background-color: lighten(#97A7BA, 25%);
+    color: $secondary;
+    outline: 0;
+    transition: background .2s linear, border .2s linear, box-shadow .2s linear;
+  }
+}
+
+.main-cta{
+  display: block;
+  margin: 20px;
+  width: calc(100% - 40px)
 }

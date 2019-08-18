@@ -194,11 +194,16 @@
  */
 .picker__select--month,
 .picker__select--year {
-  border: 1px solid #b7b7b7;
-  height: 2em;
-  padding: .5em;
+  background-color: #F1F2F6;
+  border-radius: 10px;
+  height: 28px;
+  font-size: 16px;
+  color:#36506F;
+  border: 0;
+  text-align: center;
   margin-left: .25em;
   margin-right: .25em;
+  padding-left: 10px
 }
 @media (min-width: 24.5em) {
   .picker__select--month,
@@ -323,6 +328,7 @@
   font-weight: 200;
   border-radius: 30px;
   position: relative;
+  margin-bottom: 2px;
 
   // &:after{
   //   position: absolute;
@@ -346,19 +352,7 @@
 .picker__day--today {
   position: relative;
 }
-.picker__day--today:before {
-  content: " ";
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  width: 0;
-  height: 0;
-  border-top: 0.5em solid $primary;
-  border-left: .5em solid transparent;
-}
-.picker__day--disabled:before {
-  border-top-color: #aaaaaa;
-}
+
 .picker__day--outfocus {
   color: lighten($secondary, 30%);
 }

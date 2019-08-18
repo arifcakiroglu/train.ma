@@ -1,0 +1,24 @@
+.form-group{
+  > label{
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $secondary;
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+
+.form-group-two{
+  display: flex;
+  align-items:flex-start;
+  justify-content: space-between;
+
+  >*{
+    &:first-child{
+      margin-right: 10px; 
+    }
+    &:last-child{
+      margin-left: 10px;
+    }
+  }
+}

@@ -46,6 +46,11 @@
       text-transform: uppercase;;
       font-weight: 600;
       line-height: 12px;
+
+      &.blue{
+        color: $blue;
+        text-transform: none;
+      }
     }
     .more-info{
       position: absolute;
@@ -188,6 +193,10 @@
   overflow: auto;
   height: 100%;
   margin-bottom: 20px;
+  
+  &.no-margin{
+    margin-bottom: 0
+  }
 
   .times{
     display: flex;

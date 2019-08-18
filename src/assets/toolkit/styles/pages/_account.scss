@@ -1,0 +1,30 @@
+.account-header{
+  background-color: $primary;
+  color: #fff;
+  padding: 10px 20px;
+
+  h1{
+    font:{
+      size: 18px;
+      weight: 400
+    }
+  }
+
+  a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .icon{
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      margin-right: 10px
+    }
+    svg{
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}

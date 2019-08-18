@@ -24,4 +24,8 @@
   position: relative;
   z-index: 1;
   padding-top: 60px;
+
+  &.has-footer{
+    padding-bottom: 120px
+  }
 }

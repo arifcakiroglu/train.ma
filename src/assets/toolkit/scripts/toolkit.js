@@ -13,6 +13,7 @@ let train = window.train  = require("./train");
 const pickadate = require("pickadate/lib/picker.date");
 const autoComplete = require('./components/autocomplete');
 
+require('imask');
 
 
 $.extend($.fn.pickadate.defaults, {
@@ -62,7 +63,13 @@ $(function(){
 
 
   // datepicker
-  $('.datepicker').pickadate()
+  $('.datepicker').pickadate();
+
+  $('.birthday-datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 99, // Creates a dropdown of 15 years to control year,
+    max: true
+  })
 
   // dropdown
   train.dropdown.init();
@@ -150,6 +157,21 @@ $(function(){
     $('.page-content').one('scroll', function(e){
       $('.filter-bar').addClass('active');
     })
+  }
+
+
+  // fake content placeholder
+  // TODO: make it dynamic for result
+
+  setTimeout(function(){
+    $('.results .content-placeholder').removeClass('active')
+  }, 2000);
+
+
+  if($('#card-date').exists()){
+    var dateMask = IMask(document.getElementById('card-date'),{
+      mask: '00/00'
+    });
   }
 
 });

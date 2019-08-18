@@ -1,0 +1,192 @@
+---
+title: Train
+description:
+---
+
+{{> mobile-menu }}
+
+<div class="view">
+
+  {{> header }}
+
+  <div class="header-navigation">
+    <a href="passengers.html">
+      <i><svg><use xlink:href="#arrow"></use></svg></i>
+      Récapitulatif et paiement
+    </a>
+  </div>
+
+  <div class="page payment">
+    <div class="page-content has-footer">
+      <div class="results">
+        <div class="items">
+          <div class="item card well margin-top">
+            <header>
+              <span class="blue">Aller choisi</span>
+              <div class="more-info">
+                1 Changes.
+
+                <i class="icon">
+                  <svg><use xlink:href="#arrow"></use></svg>
+                </i>
+              </div>
+            </header>
+
+            <main>
+              <div class="times-stations-container no-margin">
+                <div class="times">
+                  <div class="time">ven. 13 sept. 14:07 - 20:34</div>
+                </div>
+
+                <div class="locations">
+                  <span>Paris Gare de Lyon -Barcelone Sants</span>
+                </div>
+              </div>
+
+              <div class="journey-container">
+
+                <div class="item departure">
+                  <div class="time">
+                    <div>18:07</div>
+                    <span class="duration">2h58</span>
+                  </div>
+                  <div class="timeline">
+                    <i class="icon">
+                      <svg><use xlink:href="#train"></use></svg>
+                    </i>
+                  </div>
+                  <div class="location">
+                    Paris Gare de Lyon
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="time">
+                    <div>14:05</div>
+                  </div>
+                  <div class="timeline dashed">
+                    <i class="icon">
+                      <svg><use xlink:href="#circle"></use></svg>
+                    </i>
+                  </div>
+                  <div class="location">
+                    Nîmes
+                    <div>Correspondance, 1h45</div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="time">
+                    <div>15:50</div>
+                    <span class="duration">3h40</span>
+                  </div>
+                  <div class="timeline dashed">
+                    <i class="icon">
+                      <svg><use xlink:href="#train"></use></svg>
+                    </i>
+                  </div>
+                  <div class="location">
+                    Nîmes
+                    <div>Renfe-SNCF | 9743</div>
+                  </div>
+                </div>
+
+                <div class="item arrival">
+                  <div class="time">
+                    <div>16:34</div>
+                  </div>
+                  <div class="timeline">
+                    <i class="icon">
+                      <svg><use xlink:href="#location"></use></svg>
+                    </i>
+                  </div>
+                  <div class="location">
+                    Barcelone Sants
+                  </div>
+                </div>
+
+              </div>
+
+            </main>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card well">
+        <h3 class="border-bottom">Détails du voyage</h3>
+        <h4>Arif Çakıroğlu <span>(adulte)</span></h4>
+        <div class="email-info">
+          Votre billet sera envoyé à :
+          <span>arif@nuitee.com</span>
+        </div>
+      </div>
+
+      <div class="card well margin-top">
+        <h3 class="border-bottom">Détails du voyage</h3>
+        <form class="payment-form">
+          <div class="payment-methods">
+            <i class="icon"><svg><use xlink:href="#visa"></use></svg></i>
+            <i class="icon"><svg><use xlink:href="#master"></use></svg></i>
+            <i class="icon"><svg><use xlink:href="#maestro"></use></svg></i>
+            <i class="icon"><svg><use xlink:href="#cmi"></use></svg></i>
+          </div>
+
+          <div class="form-group">
+            <label>Nom du porteur de la carte</label>
+            <div class="input-wrap">
+              <input type="text" value="">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Numéro de carte de paiment</label>
+            <div class="input-wrap">
+              <input type="text" value="">
+            </div>
+          </div>
+
+          <div class="form-group-two">
+            <div class="form-group">
+              <label>Date d’expiration</label>
+              <div class="input-wrap">
+                <input type="text" value="" placeholder="MM/AA" id="card-date">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Code de vérification</label>
+              <div class="input-wrap">
+                <input type="text" value="" placeholder="CCV">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <div class="checkbox-wrap">
+              <input type="checkbox" name="conditions2" id="conditions2">
+              <label for="conditions2">
+                <i><svg><use xlink:href="#check"></use></svg></i>
+                <span>J'ai lu et j'accepté <a href="">les conditions générales d'utilisation…</a></span>
+              </label>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="fixed-footer">
+        <button type="button" class="btn btn-primary btn-icon btn-large main-cta open-popup" data-popup="pay">
+          Confirmer
+          <i class="icon"><svg><use xlink:href="#arrow"></use></svg></i>
+        </button>
+      </div>
+
+
+    </div>
+  </div>
+
+  {{> footer }}
+  {{> popups}}
+</div>
