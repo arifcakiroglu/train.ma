@@ -27,6 +27,7 @@ $.extend($.fn.pickadate.defaults, {
 
 $(function(){
 
+  document.addEventListener("touchstart", function(){}, true);
 
   // Get icons
   $.get("/assets/toolkit/images/icons/sprite.svg?v=1", function(data) {
@@ -173,5 +174,10 @@ $(function(){
       mask: '00/00'
     });
   }
+
+
+  $('.accordion h3').on('click', function(){
+    $(this).parent().toggleClass('active');
+  });
 
 });

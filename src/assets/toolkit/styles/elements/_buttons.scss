@@ -125,7 +125,7 @@
   &:hover,
   &:active{
     text-decoration: none;
-    background-color: darken($primary,5%);
+    background-color: darken(#EEF2F8,5%);
     outline: 0;
     transition: background .2s linear, border .2s linear, box-shadow .2s linear;
   }
