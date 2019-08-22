@@ -14,6 +14,7 @@ const pickadate = require("pickadate/lib/picker.date");
 const autoComplete = require('./components/autocomplete');
 
 require('imask');
+const AOS = require('aos');
 
 
 $.extend($.fn.pickadate.defaults, {
@@ -23,6 +24,241 @@ $.extend($.fn.pickadate.defaults, {
   clear: 'effacer',
   formatSubmit: 'yyyy/mm/dd'
 })
+
+
+var mapStyles = [
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f5f5f5"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#f5f5f5"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#bdbdbd"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#eeeeee"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e5e5e5"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ffffff"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dadada"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.line",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e5e5e5"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#eeeeee"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#c9c9c9"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#e1f2f9"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  }
+];
+
+window.setMap = function(latlng, iconName, zIndex) {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 10,
+    center: latlng,
+    disableDefaultUI: true,
+    styles: mapStyles,
+  });
+
+
+  var icon = {
+      url: "../assets/toolkit/images/marker.svg",
+      scaledSize: new google.maps.Size(30, 30)
+  };
+
+  //var image = 'images/marker.png';
+  var marker = new google.maps.Marker({
+    position: latlng,
+    map: map,
+    icon : icon
+  });
+
+  var icon2 = {
+      url: "../assets/toolkit/images/marker2.svg",
+      scaledSize: new google.maps.Size(20, 20),
+      anchor: new google.maps.Point(10, 10)
+  };
+
+  //var image = 'images/marker.png';
+  var marker = new google.maps.Marker({
+    position: {lat: 37.4419, lng: -122.3419},
+    map: map,
+    icon : icon2
+  });
+
+
+  var line = new google.maps.Polyline({
+      path: [
+          new google.maps.LatLng(37.4419, -122.3419),
+          new google.maps.LatLng(37.4519, -122.1519)
+      ],
+      strokeColor: "#36506F",
+      strokeOpacity: .8,
+      strokeWeight: 4,
+      map: map
+  });
+}
+
+var mapKey = 'AIzaSyCQxIklAvcSVuTx8lo_eLAaUTh2rcaiZbk';
+
+
+window.initMap = function() {
+
+	var latlng = {
+		lat: $('#map').data('lat'),
+		lng: $('#map').data('lng')
+	};
+
+  setMap({lat: 37.4519, lng: -122.1519})
+}
+
+if($('#map').exists()){
+  $.getScript( "https://maps.googleapis.com/maps/api/js?key="+ mapKey +"&callback=initMap" );
+}
 
 
 $(function(){
@@ -179,5 +415,12 @@ $(function(){
   $('.accordion h3').on('click', function(){
     $(this).parent().toggleClass('active');
   });
+
+  AOS.init({
+		 offset: 250,
+		 delay: 100,
+		 once: true,
+		 mirror: true
+	});
 
 });

@@ -1,4 +1,4 @@
-<div class="card margin-top">
+<div class="card margin-top search-form" data-aos="fade-down" data-aos-offset="0" data-aos-delay="50">
   <form action="result.html" method="get">
 
     <div class="search-header">
@@ -24,32 +24,32 @@
       </div>
     </div>
 
+    <div class="search-form-fields">
+      <div class="input-wrap">
+        <i class="icon">
+          <svg><use xlink:href="#target"></use></svg>
+        </i>
+        <input type="text" placeholder="from: City, Station or Airport" class="open-popup" data-popup="from" id="fromField">
+      </div>
 
+      <div class="input-wrap">
+        <i class="icon search-form-icon">
+          <svg><use xlink:href="#marker"></use></svg>
+        </i>
+        <input type="text" placeholder="to: City, Station or Airport" class="open-popup" data-popup="to" id="toField">
+      </div>
 
-    <div class="input-wrap">
-      <i class="icon">
-        <svg><use xlink:href="#target"></use></svg>
-      </i>
-      <input type="text" placeholder="from: City, Station or Airport" class="open-popup" data-popup="from" id="fromField">
+      <div class="input-wrap">
+        <i class="icon">
+          <svg><use xlink:href="#datepicker"></use></svg>
+        </i>
+        <input type="text" value="jeu. 05 sept." class="datepicker">
+      </div>
+
+      <button class="btn btn-primary btn-block" type="submit">
+        Rechercher
+      </button>
     </div>
-
-    <div class="input-wrap">
-      <i class="icon search-form-icon">
-        <svg><use xlink:href="#marker"></use></svg>
-      </i>
-      <input type="text" placeholder="to: City, Station or Airport" class="open-popup" data-popup="to" id="toField">
-    </div>
-
-    <div class="input-wrap">
-      <i class="icon">
-        <svg><use xlink:href="#datepicker"></use></svg>
-      </i>
-      <input type="text" value="jeu. 05 sept." class="datepicker">
-    </div>
-
-    <button class="btn btn-primary btn-block" type="submit">
-      Rechercher
-    </button>
 
     <label class="form-switch margin-top">
       <input type="checkbox">
@@ -58,4 +58,40 @@
     </label>
 
   </form>
+</div>
+
+
+
+<div class="feature-boxes hide-on-mobile container">
+
+  <div grid>
+    <div four data-aos="fade-down" data-aos-offset="0" data-aos-delay="100">
+      <i class="icon">
+        <svg><use xlink:href="#ticket"></use></svg>
+      </i>
+      <div>
+        <h3>Easy as 1, 2, 3</h3>
+        <p>Choose the cheapest and fastest routes from over 800 official partners</p>
+      </div>
+    </div>
+    <div four data-aos="fade-down" data-aos-offset="0" data-aos-delay="200">
+      <i class="icon">
+        <svg><use xlink:href="#baggage"></use></svg>
+      </i>
+      <div>
+        <h3>Get there your way</h3>
+        <p>Enjoy travelling by train, bus and flight across Europe</p>
+      </div>
+    </div>
+    <div four data-aos="fade-down" data-aos-offset="0" data-aos-delay="300">
+      <i class="icon">
+        <svg><use xlink:href="#heart"></use></svg>
+      </i>
+      <div>
+        <h3>Every time, anywhere</h3>
+        <p>Because your trip doesn't end with a ticket, we’re here for you all the way</p>
+      </div>
+    </div>
+  </div>
+
 </div>

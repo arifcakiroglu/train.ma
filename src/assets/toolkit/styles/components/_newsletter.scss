@@ -1,0 +1,36 @@
+.newsletter{
+  text-align: center;
+  max-width: 400px;
+  margin: 120px auto 80px;
+  h4{
+    display: block;
+    font:{
+      weight: 400;
+      size: 24px;
+    }
+    color: $secondary;
+
+    margin-bottom: 20px;
+  }
+
+  .input-wrap{
+    border-radius: 40px;
+  }
+
+  input{
+    padding-left: 30px
+  }
+
+  button{
+    background: transparent;
+    border: none;
+    height: 48px;
+    width: 48px;
+    appearance: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
