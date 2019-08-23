@@ -2,14 +2,66 @@
 
 
 @media (min-width: 990px) {
-  .view{
 
+  .result-search{
+    height: 110px;
+
+    .feature-boxes{
+      display: none !important
+    }
+    .search-form{
+      margin-top: 0 !important;
+      margin-bottom: 20px;
+      background: #fff !important;
+      position: fixed !important;
+      left: 50%;
+      transform: translateX(-50%) !important;
+      z-index: 20;
+
+
+      form{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .search-form-fields{
+        width: calc(100% - 20px)
+      }
+
+      .search-header{
+        min-width: 200px;
+        margin-bottom: 0
+      }
+
+      .form-switch{
+        display: none
+      }
+    }
+  }
+
+  .results .items>.item,
+  .content-placeholder .item{
+    margin: 0 0 20px;
+  }
+
+  .view{
+    .search-header{
+      justify-content: flex-start;
+
+      .passenger{
+        margin-left: 30px
+      }
+    }
     &.home-page{
       .page-content{
         background-image: url('/assets/toolkit/images/header.svg') !important;
         background-position: 50% 0 !important;
         background-repeat: no-repeat !important;
         background-color: #fff !important;
+      }
+      .navbar{
+        background-color: transparent !important
       }
     }
 
@@ -55,8 +107,6 @@
       position: relative;
       margin-left: auto;
       margin-right: auto;
-      padding-right: 15px;
-      padding-left: 15px;
       margin-top: 150px;
 
       background: #fff url('/assets/toolkit/images/morocco.svg') 95% 100% no-repeat;
@@ -166,6 +216,7 @@
     overflow: hidden;
     max-width: 480px;
     flex: 1;
+    margin-left: 20px;
 
     > div{
       position: fixed;
