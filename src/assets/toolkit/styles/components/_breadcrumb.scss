@@ -1,0 +1,44 @@
+.breadcrumb{
+  background-color: $primary;
+  color: #fff;
+
+  ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  li{
+    padding: 20px 0;
+    margin-right: 40px;
+
+    &:last-child{
+      i{
+        display: none
+      }
+    }
+    span{
+      opacity: .6;
+    }
+
+    &.active{
+      span{
+        opacity: 1;
+      }
+    }
+  }
+
+  i{
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    transform: rotate(180deg);
+    opacity: .7;
+
+    svg{
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}

@@ -9,7 +9,7 @@ description:
 
   {{> header }}
 
-  <div class="header-navigation">
+  <div class="header-navigation hide-on-desktop">
     <a href="result.html">
       <i><svg><use xlink:href="#arrow"></use></svg></i>
       Train : Options
@@ -18,137 +18,163 @@ description:
 
   <div class="page confirmation">
     <div class="page-content">
-      <div class="results">
-        <div class="items">
-          <div class="item card well">
-            <header>
-              <span class="blue">Aller choisi</span>
-              <div class="more-info">
-                1 Changes.
 
-                <i class="icon">
-                  <svg><use xlink:href="#arrow"></use></svg>
-                </i>
+      {{>breadcrumb}}
+      <div class="container">
+
+
+        <div class="main-grid">
+          <div class="sec1">
+            <div class="results">
+              <div class="items">
+                <div class="item card well">
+                  <header>
+                    <span class="blue">Aller choisi</span>
+                    <div class="more-info">
+                      1 Changes.
+
+                      <i class="icon">
+                        <svg><use xlink:href="#arrow"></use></svg>
+                      </i>
+                    </div>
+                  </header>
+
+                  <main>
+                    <div class="times-stations-container no-margin">
+                      <div class="times">
+                        <div class="time">ven. 13 sept. 14:07 - 20:34</div>
+                      </div>
+
+                      <div class="locations">
+                        <span>Paris Gare de Lyon -Barcelone Sants</span>
+                      </div>
+                    </div>
+
+                    <div class="journey-container">
+
+                      <div class="item departure">
+                        <div class="time">
+                          <div>18:07</div>
+                          <span class="duration">2h58</span>
+                        </div>
+                        <div class="timeline">
+                          <i class="icon">
+                            <svg><use xlink:href="#train"></use></svg>
+                          </i>
+                        </div>
+                        <div class="location">
+                          Paris Gare de Lyon
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div class="time">
+                          <div>14:05</div>
+                        </div>
+                        <div class="timeline dashed">
+                          <i class="icon">
+                            <svg><use xlink:href="#circle"></use></svg>
+                          </i>
+                        </div>
+                        <div class="location">
+                          Nîmes
+                          <div>Correspondance, 1h45</div>
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div class="time">
+                          <div>15:50</div>
+                          <span class="duration">3h40</span>
+                        </div>
+                        <div class="timeline dashed">
+                          <i class="icon">
+                            <svg><use xlink:href="#train"></use></svg>
+                          </i>
+                        </div>
+                        <div class="location">
+                          Nîmes
+                          <div>Renfe-SNCF | 9743</div>
+                        </div>
+                      </div>
+
+                      <div class="item arrival">
+                        <div class="time">
+                          <div>16:34</div>
+                        </div>
+                        <div class="timeline">
+                          <i class="icon">
+                            <svg><use xlink:href="#location"></use></svg>
+                          </i>
+                        </div>
+                        <div class="location">
+                          Barcelone Sants
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </main>
+                </div>
+
               </div>
-            </header>
-
-            <main>
-              <div class="times-stations-container no-margin">
-                <div class="times">
-                  <div class="time">ven. 13 sept. 14:07 - 20:34</div>
-                </div>
-
-                <div class="locations">
-                  <span>Paris Gare de Lyon -Barcelone Sants</span>
-                </div>
-              </div>
-
-              <div class="journey-container">
-
-                <div class="item departure">
-                  <div class="time">
-                    <div>18:07</div>
-                    <span class="duration">2h58</span>
-                  </div>
-                  <div class="timeline">
-                    <i class="icon">
-                      <svg><use xlink:href="#train"></use></svg>
-                    </i>
-                  </div>
-                  <div class="location">
-                    Paris Gare de Lyon
-                  </div>
-                </div>
-
-                <div class="item">
-                  <div class="time">
-                    <div>14:05</div>
-                  </div>
-                  <div class="timeline dashed">
-                    <i class="icon">
-                      <svg><use xlink:href="#circle"></use></svg>
-                    </i>
-                  </div>
-                  <div class="location">
-                    Nîmes
-                    <div>Correspondance, 1h45</div>
-                  </div>
-                </div>
-
-                <div class="item">
-                  <div class="time">
-                    <div>15:50</div>
-                    <span class="duration">3h40</span>
-                  </div>
-                  <div class="timeline dashed">
-                    <i class="icon">
-                      <svg><use xlink:href="#train"></use></svg>
-                    </i>
-                  </div>
-                  <div class="location">
-                    Nîmes
-                    <div>Renfe-SNCF | 9743</div>
-                  </div>
-                </div>
-
-                <div class="item arrival">
-                  <div class="time">
-                    <div>16:34</div>
-                  </div>
-                  <div class="timeline">
-                    <i class="icon">
-                      <svg><use xlink:href="#location"></use></svg>
-                    </i>
-                  </div>
-                  <div class="location">
-                    Barcelone Sants
-                  </div>
-                </div>
-
-              </div>
-
-            </main>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="card well">
-        <h3 class="border-bottom">Classe & tarif</h3>
-        <div class="class-info">
-          <div>
-            <strong>1</strong>
-          </div>
-          <div>
-            <small>ème</small>
-            <span>classe</span>
-          </div>
-        </div>
-        <p>Ce billet est échangeable et remboursable contre une retenue de 50% à tout moment avant le départ.</p>
-      </div>
-
-      <div class="card well margin-top">
-        <div class="price-info">
-
-          <div class="item row">
-            <div>Billets (1 Adulte)</div>
-            <div>399 Dhs</div>
-          </div>
-
-          <div class="item">
-            <div>
-              <strong>Total</strong> <small>(taxes comprises)</small>
             </div>
-            <div class="price">399 Dhs</div>
+          </div>
+          <div class="sec3">
+            <div class="card well">
+              <h3 class="border-bottom">Classe & tarif</h3>
+              <div class="class-info">
+                <div>
+                  <strong>1</strong>
+                </div>
+                <div>
+                  <small>ème</small>
+                  <span>classe</span>
+                </div>
+              </div>
+              <p>Ce billet est échangeable et remboursable contre une retenue de 50% à tout moment avant le départ.</p>
+            </div>
+          </div>
+
+          <div class="sec2">
+            <div class="card well margin-top">
+              <div class="price-info">
+
+                <div class="item row">
+                  <div>Billets (1 Adulte)</div>
+                  <div>399 Dhs</div>
+                </div>
+
+                <div class="item">
+                  <div>
+                    <strong>Total</strong> <small>(taxes comprises)</small>
+                  </div>
+                  <div class="price">399 Dhs</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sec4">
+            <div class="fixed-footer">
+              <a href="passengers.html" class="btn btn-primary btn-icon btn-large main-cta">
+                Confirmer
+                <i class="icon"><svg><use xlink:href="#arrow"></use></svg></i>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="fixed-footer">
-        <a href="passengers.html" class="btn btn-primary btn-icon btn-large main-cta">
-          Confirmer
-          <i class="icon"><svg><use xlink:href="#arrow"></use></svg></i>
-        </a>
+
+
+
+
+
+
+
+
+
+
       </div>
 
 

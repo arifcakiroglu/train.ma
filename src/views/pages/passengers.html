@@ -9,7 +9,7 @@ description:
 
   {{> header }}
 
-  <div class="header-navigation">
+  <div class="header-navigation hide-on-desktop">
     <a href="confirmation.html">
       <i><svg><use xlink:href="#arrow"></use></svg></i>
       Passanger Details
@@ -18,147 +18,151 @@ description:
 
   <div class="page passenger">
     <div class="page-content has-footer">
+      {{>breadcrumb}}
+      <div class="container">
+        <div class="main-grid">
+          <div class="sec2">
+            <div class="card well margin-top passenger-login text-center">
+              <h3>Vous n'avez pas encore de compte ?</h3>
+              <p>Créez un compte pour réserver plus facilement.</p>
 
-      <div class="card well margin-top passenger-login text-center">
-        <h3>Vous n'avez pas encore de compte ?</h3>
-        <p>Créez un compte pour réserver plus facilement.</p>
+              <button type="button" class="btn btn-subtle">Créer mon compte</button>
+            </div>
+          </div>
+          <div class="sec1">
+            <div class="card well margin-top">
+              <h3>Passager principal</h3>
 
-        <button type="button" class="btn btn-subtle">Créer mon compte</button>
+              <form action="">
+                <h4>Passager 1 <small>(adulte)</small></h4>
+
+                <div class="form-group">
+                  <label for="">Je suis</label>
+                  <div class="radio-wrap">
+                    <div>
+                      <input type="radio" name="title" id="title1">
+                      <label for="title1">
+                        <i><svg><use xlink:href="#check"></use></svg></i>
+                        <span>M.</span>
+                      </label>
+                    </div>
+
+                    <div>
+                      <input type="radio" name="title" id="title2">
+                      <label for="title2">
+                        <i><svg><use xlink:href="#check"></use></svg></i>
+                        <span>Mlle.</span>
+                      </label>
+                    </div>
+                    <div>
+                      <input type="radio" name="title" id="title3">
+                      <label for="title3">
+                        <i><svg><use xlink:href="#check"></use></svg></i>
+                        <span>Mme..</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="">Profile</label>
+                  <div class="radio-wrap">
+                    <div>
+                      <input type="radio" name="profile" id="jr">
+                      <label for="jr">
+                        <i><svg><use xlink:href="#check"></use></svg></i>
+                        <span>Jenue</span>
+                      </label>
+                    </div>
+
+                    <div>
+                      <input type="radio" name="profile" id="adult">
+                      <label for="adult">
+                        <i><svg><use xlink:href="#check"></use></svg></i>
+                        <span>Adulte</span>
+                      </label>
+                    </div>
+                    <div>
+                      <input type="radio" name="profile" id="senior">
+                      <label for="senior">
+                        <i><svg><use xlink:href="#check"></use></svg></i>
+                        <span>Senior</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="first-name">First Name</label>
+                  <div class="input-wrap">
+                    <input type="text" value="" name="first-name">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="first-name">Last Name</label>
+                  <div class="input-wrap">
+                    <input type="text" value="" name="first-name">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="first-name">E-mail Address</label>
+                  <div class="input-wrap">
+                    <input type="text" value="" name="first-name">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="first-name">Phone Number</label>
+                  <div class="input-wrap">
+                    <input type="text" value="" name="first-name">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="first-name">Birth-day</label>
+                  <div class="input-wrap">
+                    <i class="icon">
+                      <svg><use xlink:href="#datepicker"></use></svg>
+                    </i>
+                    <input type="text" value="" class="birthday-datepicker">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" name="conditions" id="conditions" checked>
+                    <label for="conditions">
+                      <i><svg><use xlink:href="#check"></use></svg></i>
+                      <span>Je récupère mon billet en gare ?</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" name="conditions2" id="conditions2">
+                    <label for="conditions2">
+                      <i><svg><use xlink:href="#check"></use></svg></i>
+                      <span>J'ai lu et j'accepte les conditions d'utilisation</span>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="sec3">
+            <div class="fixed-footer">
+              <a href="payment.html" class="btn btn-primary btn-icon btn-large main-cta">
+                Vérifier et payer
+                <i class="icon"><svg><use xlink:href="#arrow"></use></svg></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="card well margin-top">
-        <h3>Passager principal</h3>
-
-        <form action="">
-          <h4>Passager 1 <small>(adulte)</small></h4>
-
-          <div class="form-group">
-            <label for="">Je suis</label>
-            <div class="radio-wrap">
-              <div>
-                <input type="radio" name="title" id="title1">
-                <label for="title1">
-                  <i><svg><use xlink:href="#check"></use></svg></i>
-                  <span>M.</span>
-                </label>
-              </div>
-
-              <div>
-                <input type="radio" name="title" id="title2">
-                <label for="title2">
-                  <i><svg><use xlink:href="#check"></use></svg></i>
-                  <span>Mlle.</span>
-                </label>
-              </div>
-              <div>
-                <input type="radio" name="title" id="title3">
-                <label for="title3">
-                  <i><svg><use xlink:href="#check"></use></svg></i>
-                  <span>Mme..</span>
-                </label>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="">Profile</label>
-            <div class="radio-wrap">
-              <div>
-                <input type="radio" name="profile" id="jr">
-                <label for="jr">
-                  <i><svg><use xlink:href="#check"></use></svg></i>
-                  <span>Jenue</span>
-                </label>
-              </div>
-
-              <div>
-                <input type="radio" name="profile" id="adult">
-                <label for="adult">
-                  <i><svg><use xlink:href="#check"></use></svg></i>
-                  <span>Adulte</span>
-                </label>
-              </div>
-              <div>
-                <input type="radio" name="profile" id="senior">
-                <label for="senior">
-                  <i><svg><use xlink:href="#check"></use></svg></i>
-                  <span>Senior</span>
-                </label>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="form-group">
-            <label for="first-name">First Name</label>
-            <div class="input-wrap">
-              <input type="text" value="" name="first-name">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="first-name">Last Name</label>
-            <div class="input-wrap">
-              <input type="text" value="" name="first-name">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="first-name">E-mail Address</label>
-            <div class="input-wrap">
-              <input type="text" value="" name="first-name">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="first-name">Phone Number</label>
-            <div class="input-wrap">
-              <input type="text" value="" name="first-name">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="first-name">Birth-day</label>
-            <div class="input-wrap">
-              <i class="icon">
-                <svg><use xlink:href="#datepicker"></use></svg>
-              </i>
-              <input type="text" value="" class="birthday-datepicker">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="checkbox-wrap">
-              <input type="checkbox" name="conditions" id="conditions" checked>
-              <label for="conditions">
-                <i><svg><use xlink:href="#check"></use></svg></i>
-                <span>Je récupère mon billet en gare ?</span>
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="checkbox-wrap">
-              <input type="checkbox" name="conditions2" id="conditions2">
-              <label for="conditions2">
-                <i><svg><use xlink:href="#check"></use></svg></i>
-                <span>J'ai lu et j'accepte les conditions d'utilisation</span>
-              </label>
-            </div>
-          </div>
-
-
-
-        </form>
-      </div>
-
-      <div class="fixed-footer">
-        <a href="payment.html" class="btn btn-primary btn-icon btn-large main-cta">
-          Vérifier et payer
-          <i class="icon"><svg><use xlink:href="#arrow"></use></svg></i>
-        </a>
-      </div>
     </div>
   </div>
 
