@@ -8,107 +8,113 @@ description:
 <div class="view">
   {{> header }}
 
-  <div class="page">
+  <div class="page bookings">
     <div class="page-content has-footer">
       <div class="account-header">
-        <a href="bookings.html">
-          <i class="icon">
-            <svg><use xlink:href="#arrow"></use></svg>
-          </i>
-          Bookings
-        </a>
+        <div class="container">
+          <a href="bookings.html">
+            <i class="icon">
+              <svg><use xlink:href="#arrow"></use></svg>
+            </i>
+            Bookings
+          </a>
+        </div>
       </div>
 
-      <div class="card well margin-top">
-      <div class="results">
-        <div class="items">
-          <div class="item journey-view">
+    <div class="container">
+      <div class="main-grid">
+        <div class="sec1">
+          <div class="card well margin-top">
+            <div class="results">
+              <div class="items">
+                <div class="item journey-view">
 
-            <header>
-              <span class="blue">One-way</span>
-              <span>Sep 28, 2019</span>
-            </header>
+                  <header>
+                    <span class="blue">One-way</span>
+                    <span>Sep 28, 2019</span>
+                  </header>
 
-            <main>
+                  <main>
 
-              <div class="journey-container">
+                    <div class="journey-container">
 
-                <div class="item departure">
-                  <div class="time">
-                    <div>18:07</div>
-                    <span class="duration">2h58</span>
-                  </div>
-                  <div class="timeline">
-                    <i class="icon">
-                      <svg><use xlink:href="#train"></use></svg>
-                    </i>
-                  </div>
-                  <div class="location">
-                    Paris Gare de Lyon
-                  </div>
-                </div>
+                      <div class="item departure">
+                        <div class="time">
+                          <div>18:07</div>
+                          <span class="duration">2h58</span>
+                        </div>
+                        <div class="timeline">
+                          <i class="icon">
+                            <svg><use xlink:href="#train"></use></svg>
+                          </i>
+                        </div>
+                        <div class="location">
+                          Paris Gare de Lyon
+                        </div>
+                      </div>
 
-                <div class="item">
-                  <div class="time">
-                    <div>14:05</div>
-                  </div>
-                  <div class="timeline dashed">
-                    <i class="icon">
-                      <svg><use xlink:href="#circle"></use></svg>
-                    </i>
-                  </div>
-                  <div class="location">
-                    Nîmes
-                    <div>Correspondance, 1h45</div>
-                  </div>
-                </div>
+                      <div class="item">
+                        <div class="time">
+                          <div>14:05</div>
+                        </div>
+                        <div class="timeline dashed">
+                          <i class="icon">
+                            <svg><use xlink:href="#circle"></use></svg>
+                          </i>
+                        </div>
+                        <div class="location">
+                          Nîmes
+                          <div>Correspondance, 1h45</div>
+                        </div>
+                      </div>
 
-                <div class="item">
-                  <div class="time">
-                    <div>15:50</div>
-                    <span class="duration">3h40</span>
-                  </div>
-                  <div class="timeline dashed">
-                    <i class="icon">
-                      <svg><use xlink:href="#train"></use></svg>
-                    </i>
-                  </div>
-                  <div class="location">
-                    Nîmes
-                    <div>Renfe-SNCF | 9743</div>
-                  </div>
-                </div>
+                      <div class="item">
+                        <div class="time">
+                          <div>15:50</div>
+                          <span class="duration">3h40</span>
+                        </div>
+                        <div class="timeline dashed">
+                          <i class="icon">
+                            <svg><use xlink:href="#train"></use></svg>
+                          </i>
+                        </div>
+                        <div class="location">
+                          Nîmes
+                          <div>Renfe-SNCF | 9743</div>
+                        </div>
+                      </div>
 
-                <div class="item arrival no-margin">
-                  <div class="time">
-                    <div>16:34</div>
-                  </div>
-                  <div class="timeline">
-                    <i class="icon">
-                      <svg><use xlink:href="#location"></use></svg>
-                    </i>
-                  </div>
-                  <div class="location">
-                    Barcelone Sants
-                  </div>
+                      <div class="item arrival no-margin">
+                        <div class="time">
+                          <div>16:34</div>
+                        </div>
+                        <div class="timeline">
+                          <i class="icon">
+                            <svg><use xlink:href="#location"></use></svg>
+                          </i>
+                        </div>
+                        <div class="location">
+                          Barcelone Sants
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </main>
                 </div>
 
               </div>
-
-            </main>
+            </div>
           </div>
-
+        </div>
+        <div class="sec2">
+          <div class="card well margin-top">
+            <h3 class="text-center border-bottom">Manage your booking</h3>
+            <a href="cancellation.html" class="btn btn-primary btn-block">See cancellation options</a>
+          </div>
         </div>
       </div>
-      </div>
-
-
-      <div class="card well margin-top">
-        <h3 class="text-center border-bottom">Manage your booking</h3>
-
-
-        <a href="cancellation.html" class="btn btn-primary btn-block">See cancellation options</a>
-      </div>
+    </div>
 
     </div>
   </div>

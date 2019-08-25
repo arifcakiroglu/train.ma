@@ -6,6 +6,7 @@ html{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+
   &.fullscreen{
     .view{
       background: #F4F4F4;
@@ -42,9 +43,9 @@ body{
   font-family: $font-family-base;
   -webkit-touch-callout: none;
   -webkit-text-size-adjust: none;
-  -webkit-user-select: none;
   -webkit-highlight: none;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+
 
   &.left-panel-active{
     background-color: $primary

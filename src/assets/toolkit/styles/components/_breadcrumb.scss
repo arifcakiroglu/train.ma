@@ -1,6 +1,14 @@
 .breadcrumb{
-  background-color: $primary;
+
   color: #fff;
+  height: 60px;
+
+  > div{
+    background-color: $primary;
+    position: fixed;
+    width: 100%;
+    z-index: 20
+  }
 
   ul{
     display: flex;

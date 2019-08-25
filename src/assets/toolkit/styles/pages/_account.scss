@@ -28,3 +28,20 @@
     }
   }
 }
+
+.emptystate{
+  background-image: url('/assets/toolkit/images/empty.gif');
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  background-size: 100px;
+  margin-bottom: 20px;
+
+  h5{
+    font-weight: 400;
+    color: $secondary;
+    margin-bottom: 5px
+  }
+  > div{
+    padding-left: 80px
+  }
+}

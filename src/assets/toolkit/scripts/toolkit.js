@@ -401,7 +401,7 @@ $(function(){
   // TODO: make it dynamic for result
 
   setTimeout(function(){
-    $('.results .content-placeholder').removeClass('active')
+    $('.content-placeholder').removeClass('active')
   }, 2000);
 
 

@@ -3,6 +3,31 @@
 
 @media (min-width: 990px) {
 
+  .centered-form{
+    max-width: 700px;
+    margin: auto;
+
+    .well{
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  .pay-popup{
+    height: 80vh !important;
+    max-height: 560px !important;
+
+    .popup-page{
+      height: 560px !important;
+    }
+    &.active{
+      transform: translate3d(0,-90vh,0) !important;
+
+      .popup-page-content{
+        padding-bottom: 0 !important;
+      }
+    }
+  }
   .main-grid {
     display: grid;
     grid-template-columns: 760px 1fr;
@@ -15,7 +40,11 @@
     .sec4 { grid-area: 3 / 1 / 4 / 2; padding-right: 20px}
   }
 
-  .passenger,.payment{
+  .form-group-two{
+    justify-content: flex-start;
+  }
+
+  .passenger,.payment, .bookings{
     .well{
       margin-left: 0;
       margin-right: 0;

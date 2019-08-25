@@ -1,6 +1,9 @@
 .accordion{
   position: relative;
+  padding-top:0;
+  transition: box-shadow .2s;
   &.active{
+    box-shadow: 0 2px 4px 0 rgba(54,80,111,.15), inset 0 0 0 2px $primary;
     main{
       opacity: 1;
       visibility: visible;
@@ -14,6 +17,8 @@
   }
   h3{
     margin-bottom: 0;
+    padding-top:20px;
+    cursor: pointer;
     small{
       font-weight: 400;
       opacity: .7
@@ -24,7 +29,7 @@
       height: 44px;
       display: inline-block;
       position: absolute;
-      right: -20px;
+      right: -19px;
       top: 8px;
       z-index: 2;
       padding: 17px;
