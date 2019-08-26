@@ -1,0 +1,22 @@
+.login{
+
+  .popup-header{
+    font-size: 22px;
+    line-height: 22px;
+  }
+  
+  footer{
+    a{
+      color: $secondary;
+      transition: color .2s;
+
+      &:hover{
+        text-decoration: underline;
+        color: $primary
+      }
+      &:last-child{
+
+      }
+    }
+  }
+}

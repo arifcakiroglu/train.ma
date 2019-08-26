@@ -40,6 +40,17 @@
     }
   }
 
+  .times-icon{
+    left: auto;
+    right: 10px;
+    cursor: pointer;
+
+    svg{
+      width: 20px;
+      height: 20px;
+    }
+  }
+
   .popup-page{
     height: calc(100vh - 60px);
     width: 100%;
