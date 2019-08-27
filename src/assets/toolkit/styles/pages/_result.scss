@@ -1,5 +1,5 @@
 .result-header{
-  padding: 20px;
+  padding: 0 0 20px;
   h1{
     font:{
       size: 18px;
@@ -193,7 +193,7 @@
   overflow: auto;
   height: 100%;
   margin-bottom: 20px;
-  
+
   &.no-margin{
     margin-bottom: 0
   }

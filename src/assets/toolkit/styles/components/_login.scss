@@ -4,7 +4,7 @@
     font-size: 22px;
     line-height: 22px;
   }
-  
+
   footer{
     a{
       color: $secondary;
@@ -18,5 +18,34 @@
 
       }
     }
+  }
+
+
+}
+
+.social-connect{
+
+  .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    span{
+      line-height: 16px;
+      font-size: 16px;
+      display: inline-block;
+    }
+  }
+  i{
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 20px;
+  }
+  svg{
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 }

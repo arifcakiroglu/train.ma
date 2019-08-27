@@ -202,3 +202,53 @@
   margin: 20px;
   width: calc(100% - 40px)
 }
+
+
+
+.btn-google {
+  background: #dc4e41;
+  color: #fff;
+  border-radius: 10px !important;
+
+  &:focus {
+    text-decoration: none;
+    outline: 0;
+    transition: background .2s linear, border .2s linear, box-shadow .2s linear;
+  }
+
+  &:hover,
+  &:active{
+    text-decoration: none;
+    background-color: darken(#dc4e41,5%);
+    outline: 0;
+    transition: background .2s linear, border .2s linear, box-shadow .2s linear;
+  }
+
+  border-radius: 50px;
+  text-align: center;
+  font-size: 18px
+}
+
+.btn-facebook {
+  background: #4267b2;
+  color: #fff;
+  border-radius: 10px !important;
+
+  &:focus {
+    text-decoration: none;
+    outline: 0;
+    transition: background .2s linear, border .2s linear, box-shadow .2s linear;
+  }
+
+  &:hover,
+  &:active{
+    text-decoration: none;
+    background-color: darken(#4267b2,5%);
+    outline: 0;
+    transition: background .2s linear, border .2s linear, box-shadow .2s linear;
+  }
+
+  border-radius: 50px;
+  text-align: center;
+  font-size: 18px
+}

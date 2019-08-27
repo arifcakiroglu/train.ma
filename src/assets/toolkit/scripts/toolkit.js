@@ -300,12 +300,15 @@ $(function(){
 
 
   // datepicker
-  $('.datepicker').pickadate();
+  $('.datepicker').pickadate({
+    container: '#datepickerContainer'
+  });
 
   $('.birthday-datepicker').pickadate({
     selectMonths: true, // Creates a dropdown to control month
     selectYears: 99, // Creates a dropdown of 15 years to control year,
-    max: true
+    max: true,
+    container: '#datepickerContainer'
   })
 
   // dropdown
